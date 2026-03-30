@@ -37,6 +37,7 @@ public:
             first=first->next;
             second=second->next;
         }
+        reversell(second);
         return true;
 
     }
