@@ -1,0 +1,18 @@
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        if(headA==NULL || headB==NULL )
+        {
+            return NULL;
+        }
+        ListNode* slow= headA;
+        ListNode* fast=headB;
+        while(fast!=slow)
+        {
+            slow=(slow==NULL)? headB:slow->next;
+            fast=(fast==NULL)? headA:fast->next;
+          
+        }
+        return slow;
+    }
+};
